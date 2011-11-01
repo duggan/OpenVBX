@@ -137,13 +137,7 @@ $config['index_page'] = 'index.php';
 | 'ORIG_PATH_INFO'	Uses the ORIG_PATH_INFO
 |
 */
-if(isset($_REQUEST['vbxsite'])) {
-	/* For mod_rewrite  */
-	$config['uri_protocol'] = 'REQUEST_URI';
-} else {
-	/* For non mod_rewrite users - experimental */
-	$config['uri_protocol']	= "PATH_INFO";
-}
+$config['uri_protocol'] = 'REQUEST_URI';
 /*
 |--------------------------------------------------------------------------
 | URL suffix
